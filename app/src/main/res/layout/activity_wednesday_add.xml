@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WednesdayAdd"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/wedAddTopBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/wednesdaytopbar" />
+
+            <EditText
+                android:id="@+id/mondayInput1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="155dp"
+                android:background="@drawable/nameedit"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/mondayInput2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setsedit"
+
+                android:inputType="number"
+                android:paddingLeft="155dp" />
+
+            <EditText
+                android:id="@+id/mondayInput3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/repsedit"
+
+                android:inputType="number"
+                android:paddingLeft="155dp"/>
+
+            <EditText
+                android:id="@+id/mondayInput4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/weightedit"
+
+                android:inputType="number"
+                android:paddingLeft="155dp" />
+
+            <EditText
+                android:id="@+id/mondayInput5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/idedit"
+
+                android:inputType="number"
+                android:paddingLeft="155dp" />
+
+            <Button
+                android:id="@+id/mondayAdd2Data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/addbtn" />
+
+            <Button
+                android:id="@+id/updateMonBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/editbtn" />
+
+            <Button
+                android:id="@+id/deleteBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/deletebtn" />
+
+            <Button
+                android:id="@+id/wedAddLowerBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/lowerbarjusthome" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation = "vertical"
+
+
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="149dp"
+                android:background="@drawable/topbar" />
+
+            <Button
+                android:id="@+id/mondaybutton"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/monbtn" />
+
+            <Button
+                android:id="@+id/tuesdaybutton"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/tuesdaybtn" />
+
+            <Button
+                android:id="@+id/wednesdaybutton"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/wedbtn" />
+
+            <Button
+                android:id="@+id/thursdaybutton"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/thursbtn" />
+
+            <Button
+                android:id="@+id/fridaybutton"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/fribtn"
+                 />
+            <Button
+                android:id="@+id/saturdaybutton"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/sunbtn"
+                />
+
+            <Button
+                android:id="@+id/sundaybutton"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/satbtn"
+                 />
+
+            <Button
+                android:id="@+id/botBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/botbar" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
