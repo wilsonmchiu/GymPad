@@ -37,6 +37,20 @@
         <activity android:name=".FridayAdd" />
         <activity android:name=".SaturdayAdd" />
         <activity android:name=".SundayAdd" />
+        <activity android:name=".MondayEdit" />
+        <activity android:name=".TuesdayEdit" />
+        <activity android:name=".WednesdayEdit" />
+        <activity android:name=".ThursdayEdit" />
+        <activity android:name=".FridayEdit" />
+        <activity android:name=".SaturdayEdit" />
+        <activity android:name=".SundayEdit" />
+        <activity android:name=".MondayDelete" />
+        <activity android:name=".TuesdayDelete" />
+        <activity android:name=".WednesdayDelete" />
+        <activity android:name=".ThursdayDelete" />
+        <activity android:name=".FridayDelete" />
+        <activity android:name=".SaturdayDelete" />
+        <activity android:name=".SundayDelete"></activity>
     </application>
 
 </manifest>

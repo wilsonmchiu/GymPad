@@ -14,21 +14,30 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/mondayAddTopBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/fridaytopbar"/>
+                android:background="@drawable/fridaytopbar" />
+
+            <EditText
+                android:id="@+id/mondayInput5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/idedit"
+                android:inputType="number"
+                android:paddingLeft="155dp" />
+
             <EditText
                 android:id="@+id/mondayInput1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:paddingLeft="155dp"
+                android:background="@drawable/nameedit"
                 android:ems="10"
-                android:background="@drawable/nameedit"/>
+                android:inputType="textPersonName"
+                android:paddingLeft="155dp" />
 
             <EditText
                 android:id="@+id/mondayInput2"
@@ -36,31 +45,32 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/setsedit"
                 android:inputType="number"
-                android:paddingLeft="155dp" />
-
+                android:paddingLeft="160dp" />
 
 
             <EditText
                 android:id="@+id/mondayInput3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/repsedit"
                 android:inputType="number"
-                android:paddingLeft="155dp"
-                android:background="@drawable/repsedit"/>
+                android:paddingLeft="155dp" />
 
             <EditText
                 android:id="@+id/mondayInput4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/weightedit"
                 android:inputType="number"
-                android:paddingLeft="155dp"
-                android:background="@drawable/weightedit"/>
+                android:paddingLeft="155dp" />
 
             <Button
-                android:id="@+id/mondayAdd2Data"
+                android:id="@+id/updateMonBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/addbtn"/>
+                android:background="@drawable/editbtn" />
+
+
         </LinearLayout>
     </ScrollView>
 
@@ -74,10 +84,8 @@
             android:id="@+id/mondayAddBotBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/lowerbarjusthome"/>
-
+            android:background="@drawable/lowerbarjusthome" />
     </LinearLayout>
-
 
 
 </RelativeLayout>

@@ -15,6 +15,7 @@ public class SundayPage extends AppCompatActivity {
     private Button btnViewMonday;
     private Button updateMonday;
     private Button deleteMond;
+    private Button mondayBotBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,13 @@ public class SundayPage extends AppCompatActivity {
         addMonday = (Button) findViewById(R.id.addMonday);
         updateMonday = (Button) findViewById(R.id.updateMon);
         deleteMond = (Button) findViewById(R.id.deleteMonday);
+        mondayBotBar = (Button) findViewById(R.id.mondayBotBar);
+        mondayBotBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHome();
+            }
+        });
         updateMonday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,7 +42,7 @@ public class SundayPage extends AppCompatActivity {
         deleteMond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openSunAddPage();
+                openSunDeletePage();
             }
         });
         addMonday.setOnClickListener(new View.OnClickListener() {
@@ -46,12 +54,18 @@ public class SundayPage extends AppCompatActivity {
         ViewData();
 
     }
-
+    public void openSunDeletePage() {
+        Intent intent = new Intent(SundayPage.this, SundayDelete.class);
+        startActivity(intent);
+    }
     public void openSunAddPage() {
         Intent intent = new Intent(SundayPage.this, SundayAdd.class);
         startActivity(intent);
     }
-
+    public void openHome(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
     public void ViewData() {
         btnViewMonday.setOnClickListener(new View.OnClickListener() {
             @Override

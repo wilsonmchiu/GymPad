@@ -30,8 +30,8 @@ public class FridayAdd extends AppCompatActivity {
         btnDeleteData = (Button)findViewById(R.id.deleteBtn);
 
         AddData();
-        updateData();
-        deleteData();
+
+
         //viewData();
 
     }
@@ -55,41 +55,6 @@ public class FridayAdd extends AppCompatActivity {
                 }
         );
     }
-    public void updateData(){
-        btnUpdateData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int temp = editID.getText().toString().length();
-                if (temp > 0) {
-                    boolean update = MONWORKOUT.updateFriData(editID.getText().toString(), editName.getText().toString(),
-                            editSets.getText().toString(), editReps.getText().toString(), editWeight.getText().toString());
-                    if (update == true) {
-                        Toast.makeText(FridayAdd.this, "Successfully Updated Data!", Toast.LENGTH_LONG).show();
-                    } else {
-                        Toast.makeText(FridayAdd.this, "Something Went Wrong :(.", Toast.LENGTH_LONG).show();
-                    }
-                } else {
-                    Toast.makeText(FridayAdd.this, "You Must Enter An ID to Update :(.", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-    }
-    public void deleteData(){
-        btnDeleteData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int temp = editID.getText().toString().length();
-                if(temp > 0){
-                    Integer deleteRow = MONWORKOUT.deleteFriData(editID.getText().toString());
-                    if(deleteRow > 0){
-                        Toast.makeText(FridayAdd.this, "Successfully Deleted The Data!", Toast.LENGTH_LONG).show();
-                    }else{
-                        Toast.makeText(FridayAdd.this, "Something went wrong :(.", Toast.LENGTH_LONG).show();
-                    }
-                }else{
-                    Toast.makeText(FridayAdd.this, "You Must Enter An ID to Delete :(.", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-    }
+
+
 }

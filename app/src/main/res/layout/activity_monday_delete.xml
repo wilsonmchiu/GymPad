@@ -20,47 +20,25 @@
                 android:id="@+id/mondayAddTopBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/fridaytopbar"/>
-            <EditText
-                android:id="@+id/mondayInput1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:paddingLeft="155dp"
-                android:ems="10"
-                android:background="@drawable/nameedit"/>
-
-            <EditText
-                android:id="@+id/mondayInput2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/setsedit"
-                android:inputType="number"
-                android:paddingLeft="155dp" />
-
+                android:background="@drawable/mondaytopbar"/>
 
 
             <EditText
-                android:id="@+id/mondayInput3"
+                android:id="@+id/mondayInput5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:paddingLeft="155dp"
-                android:background="@drawable/repsedit"/>
-
-            <EditText
-                android:id="@+id/mondayInput4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:paddingLeft="155dp"
-                android:background="@drawable/weightedit"/>
+                android:background="@drawable/idedit"/>
 
             <Button
-                android:id="@+id/mondayAdd2Data"
+                android:id="@+id/deleteBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/addbtn"/>
+                android:layout_weight="1"
+                android:background="@drawable/deletebtn" />
+
+
         </LinearLayout>
     </ScrollView>
 
@@ -70,6 +48,7 @@
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:orientation="horizontal">
+
         <Button
             android:id="@+id/mondayAddBotBar"
             android:layout_width="match_parent"
@@ -77,6 +56,9 @@
             android:background="@drawable/lowerbarjusthome"/>
 
     </LinearLayout>
+
+
+
 
 
 

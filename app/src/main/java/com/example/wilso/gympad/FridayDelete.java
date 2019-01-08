@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MondayAdd extends AppCompatActivity {
+public class FridayDelete extends AppCompatActivity {
     DatabaseHelper MONWORKOUT;
     EditText editName,editSets,editReps, editWeight, editID;
     Button btnAddData, btnUpdateData, btnDeleteData, botBar;
@@ -18,7 +18,7 @@ public class MondayAdd extends AppCompatActivity {
 
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_monday_add);
+        setContentView(R.layout.activity_friday_delete);
         MONWORKOUT = new DatabaseHelper(this);
 
         editName = (EditText)findViewById(R.id.mondayInput1);
@@ -37,8 +37,7 @@ public class MondayAdd extends AppCompatActivity {
         btnUpdateData = (Button)findViewById(R.id.updateMonBtn);
         btnDeleteData = (Button)findViewById(R.id.deleteBtn);
 
-        AddData();
-
+        deleteData();
         //viewData();
 
     }
@@ -47,25 +46,25 @@ public class MondayAdd extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
-    public  void AddData() {
-        btnAddData.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        String name = editName.getText().toString();
-                        String sets =  editSets.getText().toString();
-                        String reps = editReps.getText().toString();
-                        String weight = editWeight.getText().toString();
 
-                        boolean isInserted = MONWORKOUT.insertMonData(name, sets, reps, weight);
-                        if(isInserted == true)
-                            Toast.makeText(MondayAdd.this,"Data Inserted",Toast.LENGTH_LONG).show();
-                        else
-                            Toast.makeText(MondayAdd.this,"Data not Inserted",Toast.LENGTH_LONG).show();
+
+    public void deleteData(){
+        btnDeleteData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int temp = editID.getText().toString().length();
+                if(temp > 0){
+                    int deleteRow = MONWORKOUT.deleteFriData(editID.getText().toString());
+                    if(deleteRow > 0){
+                        Toast.makeText(FridayDelete.this, "Successfully Deleted The Data!", Toast.LENGTH_LONG).show();
+                    }else{
+                        Toast.makeText(FridayDelete.this, "Something went wrong :(.", Toast.LENGTH_LONG).show();
                     }
+                }else{
+                    Toast.makeText(FridayDelete.this, "You Must Enter An ID to Delete :(.", Toast.LENGTH_LONG).show();
                 }
-        );
+            }
+        });
     }
-
-
 }
+

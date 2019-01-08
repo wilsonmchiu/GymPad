@@ -15,6 +15,7 @@ public class WednesdayPage extends AppCompatActivity {
     private Button btnViewMonday;
     private Button updateMonday;
     private Button deleteMond;
+    private Button mondayBotBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,16 +26,17 @@ public class WednesdayPage extends AppCompatActivity {
         addMonday = (Button) findViewById(R.id.addMonday);
         updateMonday = (Button) findViewById(R.id.updateMon);
         deleteMond = (Button) findViewById(R.id.deleteMonday);
+        mondayBotBar = (Button) findViewById(R.id.mondayBotBar);
         updateMonday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openWedAddPage();
+                openWedEditPage();
             }
         });
         deleteMond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openWedAddPage();
+                openWedDeletePage();
             }
         });
         addMonday.setOnClickListener(new View.OnClickListener() {
@@ -43,12 +45,32 @@ public class WednesdayPage extends AppCompatActivity {
                 openWedAddPage();
             }
         });
+        mondayBotBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHome();
+            }
+        });
         ViewData();
 
     }
 
+    public void openWedDeletePage(){
+        Intent intent = new Intent(WednesdayPage.this, WednesdayDelete.class);
+        startActivity(intent);
+    }
+
+    public void openWedEditPage(){
+        Intent intent = new Intent(WednesdayPage.this, WednesdayEdit.class);
+        startActivity(intent);
+    }
     public void openWedAddPage() {
         Intent intent = new Intent(WednesdayPage.this, WednesdayAdd.class);
+        startActivity(intent);
+    }
+
+    public void openHome(){
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 

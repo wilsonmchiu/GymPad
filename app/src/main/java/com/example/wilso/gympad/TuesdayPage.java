@@ -15,6 +15,7 @@ public class TuesdayPage extends AppCompatActivity {
     private Button btnViewMonday;
     private Button updateMonday;
     private Button deleteMond;
+    private Button tuesBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,16 +26,17 @@ public class TuesdayPage extends AppCompatActivity {
         addMonday = (Button) findViewById(R.id.addMonday);
         updateMonday = (Button) findViewById(R.id.updateMon);
         deleteMond = (Button) findViewById(R.id.deleteMonday);
+        tuesBar= (Button) findViewById(R.id.mondayBotBar);
         updateMonday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openTuesAddPage();
+                openTuesEditPage();
             }
         });
         deleteMond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openTuesAddPage();
+                openTuesDeletePage();
             }
         });
         addMonday.setOnClickListener(new View.OnClickListener() {
@@ -43,14 +45,37 @@ public class TuesdayPage extends AppCompatActivity {
                 openTuesAddPage();
             }
         });
+        tuesBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHome();
+            }
+        });
         ViewData();
 
+    }
+
+    public void openTuesDeletePage() {
+        Intent intent = new Intent(TuesdayPage.this, TuesdayDelete.class);
+        startActivity(intent);
     }
 
     public void openTuesAddPage() {
         Intent intent = new Intent(TuesdayPage.this, TuesdayAdd.class);
         startActivity(intent);
     }
+
+    public void openTuesEditPage(){
+        Intent intent = new Intent(TuesdayPage.this, TuesdayEdit.class);
+        startActivity(intent);
+    }
+
+    public void openHome(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+
 
     public void ViewData() {
         btnViewMonday.setOnClickListener(new View.OnClickListener() {

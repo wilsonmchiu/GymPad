@@ -15,26 +15,32 @@ public class MondayPage extends AppCompatActivity {
     private Button btnViewMonday;
     private Button updateMonday;
     private Button deleteMond;
+    private Button mondayBotBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monday_page);
+
         MONWORKOUTDb = new DatabaseHelper(this);
         btnViewMonday = (Button) findViewById(R.id.btnViewMonday);
         addMonday = (Button) findViewById(R.id.addMonday);
         updateMonday = (Button) findViewById(R.id.updateMon);
         deleteMond = (Button) findViewById(R.id.deleteMonday);
+        mondayBotBar = (Button) findViewById(R.id.mondayBotBar);
+
+
+
         updateMonday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openMondayAddPage();
+                openMondayEditPage();
             }
         });
         deleteMond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openMondayAddPage();
+                openMondayDeletePage();
             }
         });
         addMonday.setOnClickListener(new View.OnClickListener() {
@@ -43,12 +49,34 @@ public class MondayPage extends AppCompatActivity {
                 openMondayAddPage();
             }
         });
+        mondayBotBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHome();
+            }
+        });
+
         ViewData();
 
     }
 
+    public void openMondayDeletePage() {
+        Intent intent = new Intent(MondayPage.this, MondayDelete.class);
+        startActivity(intent);
+    }
+
     public void openMondayAddPage() {
         Intent intent = new Intent(MondayPage.this, MondayAdd.class);
+        startActivity(intent);
+    }
+
+    public void openMondayEditPage(){
+        Intent intent = new Intent(MondayPage.this, MondayEdit.class);
+        startActivity(intent);
+    }
+
+    public void openHome(){
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
